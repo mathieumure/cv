@@ -1,29 +1,33 @@
 <script setup lang="ts">
 defineProps<{
   size: string;
-}>()
+}>();
 </script>
 
 <template>
   <svg :width="size" :height="size" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_104_184)">
-      <mask id="mask0_104_184" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="12">
-        <path d="M14.4762 0H1.52381C0.682233 0 0 0.716344 0 1.6V10.4C0 11.2837 0.682233 12 1.52381 12H14.4762C15.3178 12 16 11.2837 16 10.4V1.6C16 0.716344 15.3178 0 14.4762 0Z" fill="white"/>
+      <mask id="mask0_104_184" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="12">
+        <path
+          d="M14.4762 0H1.52381C0.682233 0 0 0.716344 0 1.6V10.4C0 11.2837 0.682233 12 1.52381 12H14.4762C15.3178 12 16 11.2837 16 10.4V1.6C16 0.716344 15.3178 0 14.4762 0Z"
+          fill="white"
+        />
       </mask>
       <g mask="url(#mask0_104_184)">
-        <path d="M14.4762 0H1.52381C0.682233 0 0 0.716344 0 1.6V10.4C0 11.2837 0.682233 12 1.52381 12H14.4762C15.3178 12 16 11.2837 16 10.4V1.6C16 0.716344 15.3178 0 14.4762 0Z" fill="white"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H5.33333V12H0V0Z" fill="#002053"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 0H16V12H10.6667V0Z" fill="#CF0922"/>
+        <path
+          d="M14.4762 0H1.52381C0.682233 0 0 0.716344 0 1.6V10.4C0 11.2837 0.682233 12 1.52381 12H14.4762C15.3178 12 16 11.2837 16 10.4V1.6C16 0.716344 15.3178 0 14.4762 0Z"
+          fill="white"
+        />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H5.33333V12H0V0Z" fill="#002053" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6667 0H16V12H10.6667V0Z" fill="#CF0922" />
       </g>
     </g>
     <defs>
       <clipPath id="clip0_104_184">
-        <rect width="16" height="12" fill="white"/>
+        <rect width="16" height="12" fill="white" />
       </clipPath>
     </defs>
   </svg>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

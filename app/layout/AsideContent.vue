@@ -1,19 +1,19 @@
 <script lang="ts" setup>
-import {data} from '../data/data'
-import EmailIcon from "~/app/icons/EmailIcon.vue";
-import PhoneIcon from "~/app/icons/PhoneIcon.vue";
-import ItemWithLogo from "~/app/layout/ItemWithLogo.vue";
-import TwitterIcon from "~/app/icons/TwitterIcon.vue";
-import LinkedinIcon from "~/app/icons/LinkedinIcon.vue";
-import GithubIcon from "~/app/icons/GithubIcon.vue";
-import FrIcon from "~/app/icons/FrIcon.vue";
-import EnIcon from "~/app/icons/EnIcon.vue";
+import { data } from '../data/data';
+import EmailIcon from '~/app/icons/EmailIcon.vue';
+import PhoneIcon from '~/app/icons/PhoneIcon.vue';
+import ItemWithLogo from '~/app/layout/ItemWithLogo.vue';
+import TwitterIcon from '~/app/icons/TwitterIcon.vue';
+import LinkedinIcon from '~/app/icons/LinkedinIcon.vue';
+import GithubIcon from '~/app/icons/GithubIcon.vue';
+import FrIcon from '~/app/icons/FrIcon.vue';
+import EnIcon from '~/app/icons/EnIcon.vue';
 </script>
 
 <template>
   <aside>
     <section>
-      <img src="~/assets/pp.jpeg" alt="Avatar de Mathieu Mure">
+      <img src="~/assets/pp.jpeg" alt="Avatar de Mathieu Mure" />
       <p class="title">{{ data.name }}</p>
       <p class="description" v-html="data.description" />
     </section>
@@ -60,56 +60,55 @@ import EnIcon from "~/app/icons/EnIcon.vue";
 </template>
 
 <style scoped>
- aside {
-   background-color: var(--background-color);
-   padding: 24px;
- }
+aside {
+  background-color: var(--background-color);
+  padding: 24px;
+}
 
- img {
-   width: 33%;
-   border-radius: 100%;
- }
+img {
+  width: 33%;
+  border-radius: 100%;
+}
 
- section {
-   padding-top: 1rem;
-   padding-bottom: 1rem;
-   border-bottom: solid 1px var(--divider-color);
-   display: flex;
-   flex-direction: column;
-   gap: 1rem;
- }
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--divider-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
- section:first-child {
-   padding-top: 0;
- }
+section:first-child {
+  padding-top: 0;
+}
 
- section:last-child {
-   border-bottom: none;
- }
+section:last-child {
+  border-bottom: none;
+}
 
- .section-title {
-   font-family: DM Sans;
-   font-size: 0.65rem;
-   margin: 0;
-   color: #79819A;
- }
+.section-title {
+  font-family: DM Sans;
+  font-size: 0.65rem;
+  margin: 0;
+  color: #79819a;
+}
 
- .title {
-   font-family: Outfit;
-   font-size: 1.5rem;
-   font-style: normal;
-   font-weight: 500;
- }
+.title {
+  font-family: Outfit;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+}
 
- .description {
-   margin-top: 16px;
-   color: #818181;
-   font-size: 0.7rem;
-   font-weight: normal;
- }
+.description {
+  margin-top: 16px;
+  color: #818181;
+  font-size: 0.7rem;
+  font-weight: normal;
+}
 
- .description b {
-   font-weight: bold;
- }
-
+.description b {
+  font-weight: bold;
+}
 </style>

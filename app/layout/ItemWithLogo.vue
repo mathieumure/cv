@@ -3,12 +3,12 @@ defineProps<{
   label: string;
   content: string;
   iconColor?: string;
-}>()
+}>();
 </script>
 
 <template>
   <div class="container">
-    <div class="icon" :style="{backgroundColor: iconColor || 'var(--divider-color)'}">
+    <div class="icon" :style="{ backgroundColor: iconColor || 'var(--divider-color)' }">
       <slot />
     </div>
     <div class="item">
@@ -16,7 +16,6 @@ defineProps<{
       <p class="content">{{ content }}</p>
     </div>
   </div>
-
 </template>
 
 <style scoped>
@@ -45,7 +44,7 @@ defineProps<{
 }
 
 .item .label {
-  color: #47516B;
+  color: #47516b;
   font-size: 0.65rem;
   margin-bottom: 0.1rem;
 }
