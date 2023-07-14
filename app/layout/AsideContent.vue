@@ -8,6 +8,8 @@ import LinkedinIcon from '~/app/icons/LinkedinIcon.vue';
 import GithubIcon from '~/app/icons/GithubIcon.vue';
 import FrIcon from '~/app/icons/FrIcon.vue';
 import EnIcon from '~/app/icons/EnIcon.vue';
+import LinkIcon from '~/app/icons/LinkIcon.vue';
+import LocationIcon from '~/app/icons/LocationIcon.vue';
 </script>
 
 <template>
@@ -23,6 +25,12 @@ import EnIcon from '~/app/icons/EnIcon.vue';
       </ItemWithLogo>
       <ItemWithLogo label="Téléphone" :content="data.phone">
         <PhoneIcon size="90%" />
+      </ItemWithLogo>
+      <ItemWithLogo label="Site web" :content="data.website">
+        <LinkIcon size="90%" />
+      </ItemWithLogo>
+      <ItemWithLogo label="Adresse" :content="data.location">
+        <LocationIcon size="90%" />
       </ItemWithLogo>
     </section>
     <section>
@@ -48,13 +56,9 @@ import EnIcon from '~/app/icons/EnIcon.vue';
     </section>
     <section>
       <h3 class="section-title">Passion & Centre d'intérêts</h3>
-      <ItemWithLogo label="" :content="interest.label" v-for="interest in data.interests">
+      <ItemWithLogo v-for="interest in data.interests" :key="interest.label" label="" :content="interest.label">
         <component :is="interest.icon" size="100%" />
       </ItemWithLogo>
-    </section>
-    <section>
-      <h3 class="section-title">Détails personnel</h3>
-      <ItemWithLogo label="" :content="detail" v-for="detail in data.personalDetails" />
     </section>
   </aside>
 </template>

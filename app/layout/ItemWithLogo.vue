@@ -12,7 +12,7 @@ defineProps<{
       <slot />
     </div>
     <div class="item">
-      <p class="label" v-if="label">{{ label }}</p>
+      <p v-if="label" class="label">{{ label }}</p>
       <p class="content">{{ content }}</p>
     </div>
   </div>
