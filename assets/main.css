@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Outfit';
   font-style: normal;
   font-weight: 400;
@@ -47,4 +55,8 @@ p {
   --background-color: var(--gray-lightest-2);
   --font-color: var(--gray-1);
   --divider-color: var(--gray-lightest);
+}
+
+* {
+  box-sizing: border-box;
 }

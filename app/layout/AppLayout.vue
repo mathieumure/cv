@@ -1,5 +1,7 @@
 <script setup>
 import AsideContent from './AsideContent.vue';
+import DotSection from '~/app/layout/DotSection.vue';
+import { data } from '../data/data';
 </script>
 
 <template>
@@ -7,6 +9,7 @@ import AsideContent from './AsideContent.vue';
     <AsideContent class="aside" />
     <main>
       <h1><span class="bold">CTO / Frontend </span>Architect</h1>
+      <DotSection v-for="item in data.experiences" :content="item" />
     </main>
   </div>
 </template>
@@ -15,6 +18,8 @@ import AsideContent from './AsideContent.vue';
 .container {
   aspect-ratio: 210 / 297;
   display: flex;
+  background-color: #000;
+  justify-content: center;
 }
 .aside {
   width: 30%;
@@ -23,6 +28,8 @@ import AsideContent from './AsideContent.vue';
 main {
   display: flex;
   flex-direction: column;
+  padding: 0 1.5rem;
+  background-color: #fff;
 }
 
 .bold {
@@ -31,6 +38,6 @@ main {
 
 h1 {
   font-weight: normal;
-  margin: 24px;
+  margin: 1.5rem 1.5rem 2.5rem 1.5rem;
 }
 </style>
