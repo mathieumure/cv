@@ -2,20 +2,30 @@
 import AsideContent from './AsideContent.vue';
 import DotSection from '~/app/layout/DotSection.vue';
 import { data } from '../data/data';
+import ExperienceCard from '~/app/layout/ExperienceCard.vue';
+import SkillCard from '~/app/layout/SkillCard.vue';
 </script>
 
 <template>
-  <div class="container">
+  <div class="app-container">
     <AsideContent class="aside" />
     <main>
       <h1><span class="bold">CTO / Frontend </span>Architect</h1>
-      <DotSection v-for="item in data.experiences" :content="item" />
+      <DotSection v-for="experience in data.experiences" :title="experience.name" :icon="experience.icon">
+        <ExperienceCard v-for="item in experience.items" :experience="item" />
+      </DotSection>
+      <DotSection title="Compétences">
+        <SkillCard v-for="skill in data.skills" :skill="skill" />
+      </DotSection>
+      <DotSection title="Coucou">
+        <SkillCard v-for="skill in data.skills" :skill="skill" />
+      </DotSection>
     </main>
   </div>
 </template>
 
 <style scoped>
-.container {
+.app-container {
   aspect-ratio: 210 / 297;
   display: flex;
   background-color: #000;

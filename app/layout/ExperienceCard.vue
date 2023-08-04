@@ -7,15 +7,16 @@ defineProps<{
     main: string;
     location: string;
     dates: string;
-    icon: Component;
+    icon: string;
+    iconAmbiantColor?: string;
   };
 }>();
 </script>
 
 <template>
   <div class="container">
-    <div class="icon">
-      <img :src='experience.icon' alt=''>
+    <div class="icon" :style="{ backgroundColor: experience.iconAmbiantColor }">
+      <img :src="experience.icon" alt="" />
     </div>
     <div class="item">
       <p class="label">{{ experience.title }}</p>
@@ -44,10 +45,15 @@ defineProps<{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
   background-color: #fff;
   border-radius: 8px;
+  padding: 1px;
   filter: drop-shadow(0px 2.0436370372772217px 6.130911350250244px rgba(0, 0, 0, 0.05));
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
 }
 
 .item {

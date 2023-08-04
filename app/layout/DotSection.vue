@@ -1,20 +1,9 @@
 <script lang="ts" setup>
-import ItemWithLogo from '~/app/layout/ItemWithLogo.vue';
 import type { Component } from '@vue/runtime-core';
-import ExperienceCard from '~/app/layout/ExperienceCard.vue';
 
 defineProps<{
-  content: {
-    name: string;
-    icon: Component;
-    items: Array<{
-      title: string;
-      main: string;
-      location: string;
-      dates: string;
-      icon: Component;
-    }>;
-  };
+  title: string;
+  icon?: Component;
 }>();
 </script>
 <template>
@@ -22,10 +11,10 @@ defineProps<{
     <div class="bullet">
       <div class="circle" />
     </div>
-    <h2 class="section-title">{{ content.name }}</h2>
-    <component :is="content.icon" class="company-logo" />
+    <h2 class="section-title">{{ title }}</h2>
+    <component v-if="icon" :is="icon" class="company-logo" />
     <div class="cards-container">
-      <ExperienceCard v-for="experience in content.items" :experience="experience" />
+      <slot />
     </div>
   </section>
 </template>
