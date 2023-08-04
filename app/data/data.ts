@@ -132,21 +132,21 @@ export const data = {
   ],
   speaker: [
     {
-      logo: MovieIcon,
       title: 'Mission Playwright: the Cypress killer by Microsoft',
+      logo: '/talks/playwright.png',
       conferences: ['DevFest Nantes 2023', 'Volcamp 2022'],
     },
-    { logo: MovieIcon, title: 'Comment économiser 80% de temps de CI avec PNPM', conferences: ['Sunnytech 2023'] },
+    { logo: '/talks/pnpm.png', title: 'Comment économiser 80% de temps de CI avec PNPM', conferences: ['Sunnytech 2023'] },
     {
-      logo: MovieIcon,
+      logo: '/talks/gitops.png',
       title: 'Le GitOps dont vous êtes le héro',
       conferences: ['Mixit 2023', 'Devoxx France 2023', 'Devoxx Maroc 2022'],
     },
     {
-      logo: MovieIcon,
+      logo: '/talks/vite.png',
       title: 'Vite the webpack killer',
       conferences: ['DevFest Nantes 2021', 'JUG Summer Camp 2021', 'Lyon JS'],
     },
-    { logo: MovieIcon, title: 'Comment se faire traquer sur TOR sans s’en rendre compte', conferences: [''] },
+    { logo: '/talks/tor.png', title: 'Comment se faire traquer sur TOR sans s’en rendre compte', conferences: ['DevFest Strasbourg 2019'] },
   ],
 };

@@ -4,6 +4,7 @@ import DotSection from '~/app/layout/DotSection.vue';
 import { data } from '../data/data';
 import ExperienceCard from '~/app/layout/ExperienceCard.vue';
 import SkillCard from '~/app/layout/SkillCard.vue';
+import SpeakerCard from '~/app/layout/SpeakerCard.vue';
 </script>
 
 <template>
@@ -17,8 +18,8 @@ import SkillCard from '~/app/layout/SkillCard.vue';
       <DotSection title="Compétences">
         <SkillCard v-for="skill in data.skills" :skill="skill" />
       </DotSection>
-      <DotSection title="Coucou">
-        <SkillCard v-for="skill in data.skills" :skill="skill" />
+      <DotSection title="Speaker" class="inline-cards">
+        <SpeakerCard v-for="talk in data.speaker" :talk="talk" />
       </DotSection>
     </main>
   </div>
@@ -26,13 +27,12 @@ import SkillCard from '~/app/layout/SkillCard.vue';
 
 <style scoped>
 .app-container {
-  aspect-ratio: 210 / 297;
   display: flex;
   background-color: #000;
   justify-content: center;
 }
 .aside {
-  width: 30%;
+  width: 400px;
 }
 
 main {
@@ -40,6 +40,7 @@ main {
   flex-direction: column;
   padding: 0 1.5rem;
   background-color: #fff;
+  width: 700px;
 }
 
 .bold {
@@ -49,5 +50,10 @@ main {
 h1 {
   font-weight: normal;
   margin: 1.5rem 1.5rem 2.5rem 1.5rem;
+}
+
+.inline-cards :deep(.cards-container) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 </style>
